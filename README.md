@@ -1,0 +1,2 @@
+# String_StringBuilder_serialization
+比较String和StringBuilder之间效率&amp;&amp;了解序列化和反序列化
