@@ -1,0 +1,21 @@
+@Test
+public void StringBuilderTest(){
+	String s="你好";
+	Runtime r = Runtime.getRuntime();
+//	Runtime是私有的，不能new
+//	程序启动时小号的内存：total-free；
+	long userStart=r.totalMemory()-r.freeMemory();
+	long timesStart=System.nanoTime();
+//	启动时，获得纳秒值
+//	-----------------------------------------------
+//	使用StringBuilder来测试
+//	StringBuilder sb=new StringBuilder();
+	for(int i=0;i<1000000;i++){
+		s+="YES！";
+//		sb.append("YES！");
+
+	}
+	long userEnd=r.totalMemory()-r.freeMemory();
+	long timesEnd=System.nanoTime();
+	System.out.println("Time:"+(timesEnd-timesStart));
+	System.out.println("Memory:"+(userEnd-userStart));
