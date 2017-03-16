@@ -1,2 +1,4 @@
 # String_StringBuilder_serialization
 比较String和StringBuilder之间效率&amp;&amp;了解序列化和反序列化
+StringBuilder比String效率快的原因分析：
+String是被final定义的，不能被继承的，不能被修改，字符串对象的内容一旦被创建就需要创建新的内存空间和字符串，而StringBuilder既封装了算法，又封装了可变的字符串，对象创建后可以通过调用方法改变或者封装字符序列，是可以改变内部封装的字符串内容，而且不会创建新的对象，在频繁操作字符串时时并发处理的，效率高，又可以节约内存空间！
